@@ -115,3 +115,24 @@ if(numeroJugador === numeroSecreto){
 }else {
     console.log("El numero es muy alto, intenta de nuevo")
 }
+
+/* cuarto ejercicio*/
+
+
+let totalCompra = parseFloat(prompt("Ingresa el total de la compra:"));
+
+
+if (isNaN(totalCompra) || totalCompra < 0) {
+    alert("Por favor, ingresa un número válido.");
+} else {
+    let totalConDescuento;
+
+    
+    if (totalCompra > 100) {
+        totalConDescuento = totalCompra * 0.9; // Descuento del 10%
+        console.log("Total con descuento: $" + totalConDescuento.toFixed(2));
+    } else {
+        // Muestra el total sin descuento si es menor o igual a 100
+        console.log("Total sin descuento: $" + totalCompra.toFixed(2));
+    }
+}
