@@ -136,3 +136,104 @@ if (isNaN(totalCompra) || totalCompra < 0) {
         console.log("Total sin descuento: $" + totalCompra.toFixed(2));
     }
 }
+
+/* Quinto ejercicio */
+
+let comparar = true;
+
+while(comparar == true){
+    let num1 = parseInt(prompt("Ingrese un numero "))
+    let num2 = parseInt(prompt("Ingrese otro numero "))
+    
+    if(num1 > 0 && num2 > 0){
+        comparar = false;
+        console.log("Bien hecho");
+    } else {
+        comparar = true;
+        console.log("Ingrese un numero mayor que 0");
+
+    }
+    if (num1 > num2 && comparar == false){
+        console.log("El numero mayor es : " + num1);
+    } else if (num1 == num2){
+        console.log("Los numeros son iguales");
+    } else {
+        console.log("El numero mayor es: " + num2)
+    }
+}
+
+/* Noveno ejercicio*/
+
+
+let lado1 = parseFloat(prompt("Ingresa el primer lado del triángulo:"));
+let lado2 = parseFloat(prompt("Ingresa el segundo lado del triángulo:"));
+let lado3 = parseFloat(prompt("Ingresa el tercer lado del triángulo:"));
+
+
+if (lado1 <= 0 || lado2 <= 0 || lado3 <= 0) {
+    console.log("Los lados deben ser números positivos.");
+} else if (lado1 + lado2 <= lado3 || lado1 + lado3 <= lado2 || lado2 + lado3 <= lado1) {
+    console.log("Los lados ingresados no forman un triángulo válido.");
+} else {
+    
+    
+    if (lado1 === lado2 && lado2 === lado3) {
+        console.log("El triángulo es equilátero.");
+    } else if (lado1 === lado2 || lado1 === lado3 || lado2 === lado3) {
+        console.log("El triángulo es isósceles.");
+    } else {
+        console.log("El triángulo es escaleno.");
+    }
+}
+
+/* decimotercero ejercicio*/
+
+let usuario = prompt("Digite su usuario : ")
+console.log("Bienvenido " + usuario)
+
+let contraseña = prompt(" Ingresa tu contraseña : ")
+
+if(contraseña === "1234"){
+    console.log("Acceso concedido")
+}else{
+    console.log("Acceso denegado")
+}
+
+
+/* sexto ejercicio*/
+
+let clasificar = parseInt(prompt("Ingresa tu edad : "))
+
+if(isNaN(clasificar) || clasificar < 0 ){
+    console.log("por favor ingresa una edad valida.");
+}else{
+    if(edad < 12){
+        console.log("Eres un niño")
+    }else if(clasificar >= 12 && clasificar <= 17){
+        console.log("Eres un adolescente")
+    }else if(clasificar >= 18 && clasificar <= 64){
+        console.log("Eres un adulto")
+    }else{
+        console.log("Eres un adulto mayor.")
+    }
+}
+
+/* undécimo ejercicio*/
+
+let peso = parseFloat(prompt(" Ingresa su peso y altura : "))
+
+if(isNaN(peso) || peso < 0){
+    console.log("por favor ingresa tu masa corporal.");
+}else{
+    if(peso < 18.5){
+        console.log("Tienes bajo peso")
+    }else if(peso >= 18.5 && peso <= 24.9){
+        console.log("Tienes peso normal")
+    }else if(peso >= 25.0 && peso <= 29.9){
+        console.log("Tienes sobrepeso")
+    }else if(peso >= 29.9 && peso <= 30.0){
+        console.log("Tienes obesidad")
+    }else{
+        console.log("Sufres de obesidad")
+    }
+}
