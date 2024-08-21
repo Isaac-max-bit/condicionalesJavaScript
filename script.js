@@ -218,7 +218,7 @@ if(isNaN(clasificar) || clasificar < 0 ){
     }
 }
 
-/* undécimo ejercicio*/
+/* decimoquinto ejercicio*/
 
 let peso = parseFloat(prompt(" Ingresa su peso y altura : "))
 
@@ -236,4 +236,31 @@ if(isNaN(peso) || peso < 0){
     }else{
         console.log("Sufres de obesidad")
     }
+}
+
+/* undécimo ejercicio*/
+
+
+let precioBase = parseFloat(prompt("Ingresa el precio base del producto:"));
+
+
+if (isNaN(precioBase) || precioBase <= 0) {
+    console.log("Por favor, ingresa un precio válido.");
+} else {
+    let descuento;
+    
+    
+    if (precioBase > 500) {
+        descuento = 0.15;
+    } else if (precioBase >= 300 && precioBase <= 500) {
+        descuento = 0.10;
+    } else {
+        descuento = 0.05;
+    }
+    
+    
+    let precioFinal = precioBase * (1 - descuento);
+    
+    
+    console.log("El precio final después del descuento es: $" + precioFinal.toFixed(2));
 }
